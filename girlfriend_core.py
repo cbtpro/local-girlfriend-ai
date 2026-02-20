@@ -73,7 +73,7 @@ class GirlfriendAI:
         # 调用 Ollama Qwen 模型
         try:
             response = ollama.chat(
-                model=self.ai.model,
+                model=self.model,
                 messages=messages,
                 stream=False,
                 options={

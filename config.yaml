@@ -22,6 +22,11 @@ voice:
   tts_voice: "zh-CN-XiaoxiaoNeural"  # 中文女声（小晓 - 温柔可爱）
   tts_rate: 1.0                   # 语速
   asr_model: "base"               # 语音识别模型
+  # 新增：离线配置
+  offline_enabled: true               # 启用离线降级
+  offline_engine: "pyttsx3"          # 离线引擎
+  offline_voice: "com.apple.speech.synthesis.voice.Moira"  # Mac 本地女声
+  offline_rate: 1.0                  # 离线语速
 
 # 其他设置
 system:

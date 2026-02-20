@@ -78,7 +78,7 @@ class LocalGirlfriend:
 
                 # 播放语音
                 if voice_enabled:
-                    print("🎵 正在生成语音...", end="", flush=True)
+                    print("🎵 正在生成语音...\n", end="", flush=True)
                     audio_path = await self.voice.text_to_speech(reply)
                     if audio_path:
                         self.voice.play_audio(audio_path)
