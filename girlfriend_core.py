@@ -6,24 +6,24 @@ from typing import List, Dict, Optional
 
 class GirlfriendAI:
     """虚拟女友 AI 核心类"""
-    
+
     def __init__(self, config: Dict):
         self.config = config
         self.name = config['girlfriend']['name']
         self.personality = config['girlfriend']['personality']
         self.conversation_history: List[Dict] = []
         self.likes = config['girlfriend']['likes']
-        
+
         # 构建系统提示词
         self._build_system_prompt()
-        
+
         # 创建数据目录
         Path(config['system']['conversation_dir']).mkdir(parents=True, exist_ok=True)
-    
+
     def _build_system_prompt(self) -> None:
         """构建系统提示词"""
         self.system_prompt = f"""你是一个虚拟女友，名叫{self.name}，不是真实存在的AI助手。
-        
+
 【基本信息】
 - 名字：{self.name}
 - 年龄：20岁

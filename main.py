@@ -1,5 +1,6 @@
 import asyncio
 import yaml
+import whisper
 from pathlib import Path
 from girlfriend_core import GirlfriendAI
 from voice_manager import VoiceManager
@@ -113,6 +114,12 @@ class LocalGirlfriend:
         print(f"  • 用户消息: {stats['user_messages']}")
         print(f"  • AI 回复: {stats['ai_messages']}")
         print(f"  • 对话时长: {stats['duration']}")
+
+    def speech_to_text(audio_path: str) -> str:
+        """语音识别"""
+        model = whisper.load_model("base")
+        result = model.transcribe(audio_path, language="zh")
+        return result["text"]
 
 async def main():
     """程序入口"""

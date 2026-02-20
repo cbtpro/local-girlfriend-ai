@@ -2,6 +2,8 @@
 
 # AI 模型配置
 ai:
+  # 可选模型：
+  # model: "ALIENTELLIGENCE/sarahv2:latest"
   model: "qwen:7b-chat"           # Qwen 7B Chat 模型
   temperature: 0.8                # 生成多样性
   top_p: 0.9
@@ -12,7 +14,7 @@ girlfriend:
   name: "柔柔"                     # 女友名字
   age: 20
   personality: "温柔体贴、聪慧可爱、活泼俏皮"  # 性格
-  likes: ["编程", "游戏", "深夜聊天", "看电影"]
+  likes: ["编程", "游戏", "深夜聊天", "看电影"] # 爱好
 
 # 语音设置
 voice:
