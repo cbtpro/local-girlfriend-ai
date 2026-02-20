@@ -1,0 +1,28 @@
+# Mac M2 虚拟女友 AI 配置
+
+# AI 模型配置
+ai:
+  model: "qwen:7b-chat"           # Qwen 7B Chat 模型
+  temperature: 0.8                # 生成多样性
+  top_p: 0.9
+  max_tokens: 512
+
+# 虚拟女友信息
+girlfriend:
+  name: "柔柔"                     # 女友名字
+  age: 20
+  personality: "温柔体贴、聪慧可爱、活泼俏皮"  # 性格
+  likes: ["编程", "游戏", "深夜聊天", "看电影"]
+
+# 语音设置
+voice:
+  tts_engine: "edge-tts"          # 文字转语音引擎
+  tts_voice: "zh-CN-XiaoxiaoNeural"  # 中文女声（小晓 - 温柔可爱）
+  tts_rate: 1.0                   # 语速
+  asr_model: "base"               # 语音识别模型
+
+# 其他设置
+system:
+  save_conversations: true        # 保存对话记录
+  conversation_dir: "./data/conversations"
+  log_level: "INFO"
