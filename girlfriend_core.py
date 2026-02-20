@@ -10,6 +10,9 @@ class GirlfriendAI:
     def __init__(self, config: Dict):
         self.config = config
         self.name = config['girlfriend']['name']
+        self.age = config['girlfriend']['age']
+        self.model = config['ai']['model']
+        self.voice_engine = config['voice']['tts_engine']
         self.personality = config['girlfriend']['personality']
         self.conversation_history: List[Dict] = []
         self.likes = config['girlfriend']['likes']
@@ -70,7 +73,7 @@ class GirlfriendAI:
         # 调用 Ollama Qwen 模型
         try:
             response = ollama.chat(
-                model=self.config['ai']['model'],
+                model=self.ai.model,
                 messages=messages,
                 stream=False,
                 options={
