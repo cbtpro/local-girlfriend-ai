@@ -19,7 +19,7 @@ pip install --upgrade pip
 
 ```shell
 # 安装依赖
-pip install ollama edge-tts openai-whisper gradio pydantic
+pip install pyttsx3 pyyaml ollama edge-tts openai-whisper gradio pydantic watchfiles
 
 # Mac 可选：安装 ffmpeg (语音处理)
 brew install ffmpeg
@@ -69,6 +69,11 @@ ollama serve &
 
 # 2. 运行虚拟女友
 python main.py
+
+# 运行 web
+python web_ui.py
+# 热更新开发
+gradio web_ui.py
 ```
 
 ### 自定义女友
